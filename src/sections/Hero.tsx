@@ -4,7 +4,6 @@ import WordsPullUp from '../components/WordsPullUp'
 
 const NAV_ITEMS = [
   { label: 'About', href: '#about' },
-  { label: 'Experience', href: '#experience' },
   { label: 'Work', href: '#work' },
   { label: 'Contact', href: '#contact' },
 ]

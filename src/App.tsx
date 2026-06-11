@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Hero from './sections/Hero'
 import About from './sections/About'
-import Experience from './sections/Experience'
 import Work from './sections/Work'
 import Contact from './sections/Contact'
 import ShowcaseModal, { type Showcase } from './components/ShowcaseModal'
@@ -13,7 +12,6 @@ export default function App() {
     <main className="bg-black">
       <Hero />
       <About />
-      <Experience />
       <Work onOpen={setActive} />
       <Contact />
       <ShowcaseModal showcase={active} onClose={() => setActive(null)} />
