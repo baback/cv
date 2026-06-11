@@ -1,5 +1,4 @@
 import WordsPullUpMultiStyle from '../components/WordsPullUpMultiStyle'
-import AnimatedParagraph from '../components/AnimatedParagraph'
 
 export default function About() {
   return (
@@ -25,10 +24,6 @@ export default function About() {
           />
         </h2>
 
-        <AnimatedParagraph
-          className="mt-10 max-w-3xl text-xs leading-relaxed sm:text-sm md:text-base"
-          text="Over 13+ years I have built component systems that scale to millions of outputs, led a 12-person team, and shipped fintech and enterprise products used by tens of millions of people. I wireframe in code, prototype with AI tools, and care about experiences people actually trust."
-        />
       </div>
     </section>
   )
