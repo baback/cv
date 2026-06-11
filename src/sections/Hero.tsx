@@ -55,7 +55,7 @@ export default function Hero() {
         <div className="absolute bottom-0 left-0 right-0 grid grid-cols-12 items-end gap-4 p-5 sm:p-8 md:p-10">
           <div className="col-span-12 lg:col-span-8">
             <WordsPullUp
-              text="Babak Jafari"
+              text="Babak"
               showAsterisk
               color="#E1E0CC"
               className="text-[26vw] font-medium leading-[0.85] tracking-[-0.07em] sm:text-[24vw] md:text-[22vw] lg:text-[20vw] xl:text-[19vw] 2xl:text-[20vw]"

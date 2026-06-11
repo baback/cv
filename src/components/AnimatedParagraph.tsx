@@ -13,7 +13,7 @@ function AnimatedLetter({ char, index, totalChars, progress }: AnimatedLetterPro
   const opacity = useTransform(
     progress,
     [charProgress - 0.1, charProgress + 0.05],
-    [0.2, 1]
+    [0.35, 1]
   )
   return (
     <motion.span style={{ opacity }}>
@@ -31,7 +31,7 @@ export default function AnimatedParagraph({ text, className = '' }: Props) {
   const ref = useRef<HTMLParagraphElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['start 0.8', 'end 0.2'],
+    offset: ['start 0.85', 'end 0.55'],
   })
 
   const chars = text.split('')

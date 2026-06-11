@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin } from 'lucide-react'
+import { MapPin, Linkedin } from 'lucide-react'
 import { CONTACT } from '../config'
 
 const TOOLS = [
@@ -30,18 +30,6 @@ export default function Contact() {
 
         <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-sm sm:text-base">
           <a
-            href={`mailto:${CONTACT.email}`}
-            className="flex items-center gap-2 text-primary/80 transition-colors hover:text-primary"
-          >
-            <Mail size={16} /> {CONTACT.email}
-          </a>
-          <a
-            href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
-            className="flex items-center gap-2 text-primary/80 transition-colors hover:text-primary"
-          >
-            <Phone size={16} /> {CONTACT.phone}
-          </a>
-          <a
             href={CONTACT.linkedin}
             target="_blank"
             rel="noreferrer"
@@ -70,11 +58,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-1 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            Associate’s Degree, Computer Engineering — Sadjad University of
-            Technology, 2013 · English · Persian
-          </p>
+        <div className="mt-10 flex flex-col gap-1 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-end">
           <p>© {new Date().getFullYear()} Babak Jafari</p>
         </div>
       </div>

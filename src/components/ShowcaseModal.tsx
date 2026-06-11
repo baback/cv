@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Lock, X, ArrowRight } from 'lucide-react'
+import { X, ArrowRight } from 'lucide-react'
 import { SHOWCASE_PASSWORD } from '../config'
 
 export interface Showcase {
@@ -87,20 +87,10 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
               >
                 {showcase.title}
               </h3>
-              <p className="mt-3 text-sm text-gray-400 sm:text-base">
-                {showcase.blurb}
-              </p>
 
               {!unlocked ? (
                 <form onSubmit={submit} className="mt-8">
-                  <div className="flex items-center gap-2 text-primary/70">
-                    <Lock size={15} />
-                    <span className="text-xs sm:text-sm">
-                      This case study is in progress — enter the access password
-                      to preview it.
-                    </span>
-                  </div>
-                  <div className="mt-4 flex gap-2">
+                  <div className="flex gap-2">
                     <input
                       type="password"
                       autoFocus
@@ -109,7 +99,7 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
                         setInput(e.target.value)
                         setError(false)
                       }}
-                      placeholder="Access password"
+                      placeholder="Password"
                       className="flex-1 rounded-full border border-white/10 bg-black/40 px-5 py-3 text-sm text-primary placeholder:text-gray-600 outline-none focus:border-primary/50"
                     />
                     <button
@@ -125,7 +115,7 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
                   </div>
                   {error && (
                     <p className="mt-3 text-xs text-red-400/80">
-                      That password isn’t right. Reach out to Babak for access.
+                      Incorrect password.
                     </p>
                   )}
                 </form>
@@ -136,6 +126,9 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
                   transition={{ duration: 0.4 }}
                   className="mt-8"
                 >
+                  <p className="mb-6 text-sm text-gray-400 sm:text-base">
+                    {showcase.blurb}
+                  </p>
                   <ul className="space-y-3">
                     {showcase.highlights.map((h, i) => (
                       <li
