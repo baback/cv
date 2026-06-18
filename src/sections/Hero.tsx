@@ -63,7 +63,7 @@ export default function Hero() {
 
           <div className="col-span-12 flex flex-col gap-5 lg:col-span-4 lg:pb-4">
             <motion.p
-              className="text-xs leading-[1.2] text-primary/70 sm:text-sm md:text-base"
+              className="text-xs leading-[1.2] text-[#E1E0CC]/70 sm:text-sm md:text-base"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.5, ease }}
@@ -75,7 +75,7 @@ export default function Hero() {
 
             <motion.a
               href="#work"
-              className="group inline-flex w-fit items-center gap-2 rounded-full bg-primary py-1.5 pl-5 pr-1.5 text-sm font-medium text-black transition-all hover:gap-3 sm:text-base"
+              className="group inline-flex w-fit items-center gap-2 rounded-full bg-[#DEDBC8] py-1.5 pl-5 pr-1.5 text-sm font-medium text-black transition-all hover:gap-3 sm:text-base"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7, ease }}

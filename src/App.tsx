@@ -9,7 +9,7 @@ export default function App() {
   const [active, setActive] = useState<Showcase | null>(null)
 
   return (
-    <main className="bg-black">
+    <main className="bg-page">
       <Hero />
       <About />
       <Work onOpen={setActive} />

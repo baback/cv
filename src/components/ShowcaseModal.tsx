@@ -60,7 +60,7 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
           <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
 
           <motion.div
-            className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-[#101010] p-6 sm:p-10"
+            className="relative w-full max-w-lg overflow-hidden rounded-3xl bg-surface p-6 sm:p-10"
             initial={{ scale: 0.95, y: 16, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
             exit={{ scale: 0.95, y: 16, opacity: 0 }}
@@ -71,7 +71,7 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
 
             <button
               onClick={onClose}
-              className="absolute right-5 top-5 z-10 text-gray-500 transition-colors hover:text-primary"
+              className="absolute right-5 top-5 z-10 text-subtle transition-colors hover:text-primary"
               aria-label="Close"
             >
               <X size={20} />
@@ -81,10 +81,7 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
               <p className="text-[10px] uppercase tracking-[0.2em] text-primary sm:text-xs">
                 {showcase.role}
               </p>
-              <h3
-                className="mt-2 text-3xl font-medium sm:text-4xl"
-                style={{ color: '#E1E0CC' }}
-              >
+              <h3 className="mt-2 text-3xl font-medium text-primary sm:text-4xl">
                 {showcase.title}
               </h3>
 
@@ -100,11 +97,11 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
                         setError(false)
                       }}
                       placeholder="Password"
-                      className="flex-1 rounded-full border border-white/10 bg-black/40 px-5 py-3 text-sm text-primary placeholder:text-gray-600 outline-none focus:border-primary/50"
+                      className="flex-1 rounded-full border border-line/15 bg-line/5 px-5 py-3 text-sm text-primary placeholder:text-subtle outline-none focus:border-primary/50"
                     />
                     <button
                       type="submit"
-                      className="group flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-black transition-all hover:gap-3"
+                      className="group flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-on-primary transition-all hover:gap-3"
                     >
                       Enter
                       <ArrowRight
@@ -126,20 +123,20 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
                   transition={{ duration: 0.4 }}
                   className="mt-8"
                 >
-                  <p className="mb-6 text-sm text-gray-400 sm:text-base">
+                  <p className="mb-6 text-sm text-muted sm:text-base">
                     {showcase.blurb}
                   </p>
                   <ul className="space-y-3">
                     {showcase.highlights.map((h, i) => (
                       <li
                         key={i}
-                        className="text-sm leading-relaxed text-gray-300 sm:text-base"
+                        className="text-sm leading-relaxed text-primary/90 sm:text-base"
                       >
                         — {h}
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-8 rounded-2xl border border-white/10 bg-black/40 px-5 py-4 text-xs text-primary/60 sm:text-sm">
+                  <p className="mt-8 rounded-2xl border border-line/10 bg-line/5 px-5 py-4 text-xs text-primary/60 sm:text-sm">
                     The full visual case study is still being built. Thanks for
                     your patience — check back soon.
                   </p>

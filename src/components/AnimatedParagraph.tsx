@@ -37,7 +37,7 @@ export default function AnimatedParagraph({ text, className = '' }: Props) {
   const chars = text.split('')
 
   return (
-    <p ref={ref} className={className} style={{ color: '#DEDBC8' }}>
+    <p ref={ref} className={className} style={{ color: 'rgb(var(--c-primary))' }}>
       {chars.map((char, i) => (
         <AnimatedLetter
           key={i}

@@ -2,8 +2,8 @@ import WordsPullUpMultiStyle from '../components/WordsPullUpMultiStyle'
 
 export default function About() {
   return (
-    <section id="about" className="bg-black px-4 py-20 md:py-28">
-      <div className="mx-auto flex max-w-6xl flex-col items-center rounded-3xl bg-[#101010] px-6 py-16 text-center sm:px-10 md:py-24">
+    <section id="about" className="bg-page px-4 py-20 md:py-28">
+      <div className="mx-auto flex max-w-6xl flex-col items-center rounded-3xl bg-surface px-6 py-16 text-center sm:px-10 md:py-24">
         <p className="text-[10px] uppercase tracking-[0.2em] text-primary sm:text-xs">
           Product design
         </p>

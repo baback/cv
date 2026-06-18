@@ -64,7 +64,7 @@ function ShowcaseCard({ showcase, index, onOpen }: CardProps) {
         delay: index * 0.15,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative flex h-[420px] flex-col justify-end overflow-hidden rounded-3xl bg-[#212121] p-6 text-left sm:p-8"
+      className="group relative flex h-[420px] flex-col justify-end overflow-hidden rounded-3xl bg-surface2 p-6 text-left sm:p-8"
     >
       {/* Media background */}
       {media.type === 'video' ? (
@@ -86,12 +86,12 @@ function ShowcaseCard({ showcase, index, onOpen }: CardProps) {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
       {/* Lock badge */}
-      <span className="absolute right-5 top-5 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[10px] text-primary/80 backdrop-blur-sm sm:text-xs">
+      <span className="absolute right-5 top-5 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[10px] text-[#E1E0CC]/80 backdrop-blur-sm sm:text-xs">
         <Lock size={12} /> Password
       </span>
 
       <div className="relative">
-        <p className="text-[10px] uppercase tracking-[0.2em] text-primary/80 sm:text-xs">
+        <p className="text-[10px] uppercase tracking-[0.2em] text-[#E1E0CC]/80 sm:text-xs">
           {showcase.role}
         </p>
         <h3
@@ -102,7 +102,7 @@ function ShowcaseCard({ showcase, index, onOpen }: CardProps) {
         </h3>
         <p className="mt-3 max-w-md text-sm text-gray-300">{showcase.blurb}</p>
 
-        <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-primary transition-all group-hover:gap-3">
+        <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#E1E0CC] transition-all group-hover:gap-3">
           View case study
           <ArrowRight size={16} className="-rotate-45 transition-transform" />
         </span>
@@ -119,7 +119,7 @@ export default function Work({ onOpen }: Props) {
   return (
     <section
       id="work"
-      className="relative min-h-screen bg-black px-4 py-20 md:py-28"
+      className="relative min-h-screen bg-page px-4 py-20 md:py-28"
     >
       <div className="bg-noise pointer-events-none absolute inset-0 opacity-[0.15]" />
 
@@ -134,7 +134,7 @@ export default function Work({ onOpen }: Props) {
               },
               {
                 text: 'AI products. Fintech. Legal-tech.',
-                className: 'text-gray-500',
+                className: 'text-subtle',
               },
             ]}
           />
