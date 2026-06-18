@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import WordsPullUpMultiStyle from '../components/WordsPullUpMultiStyle'
 
 export default function About() {
@@ -8,7 +9,7 @@ export default function About() {
           Product design
         </p>
 
-        <h2 className="mt-6 max-w-3xl text-3xl leading-[0.95] sm:text-4xl sm:leading-[0.9] md:text-5xl lg:text-6xl xl:text-7xl">
+        <h2 className="mt-6 max-w-4xl text-2xl leading-[1.15] sm:text-3xl sm:leading-[1.1] md:text-4xl lg:text-5xl lg:leading-[1.05]">
           <WordsPullUpMultiStyle
             segments={[
               { text: 'I am Babak Jafari,', className: 'font-normal' },
@@ -24,6 +25,19 @@ export default function About() {
           />
         </h2>
 
+        <motion.p
+          className="mx-auto mt-10 w-full max-w-[640px] text-left text-sm leading-relaxed text-primary sm:text-base"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+        >
+          Over 13+ years across AI, fintech, and enterprise, I've shipped
+          products used by tens of millions — including a 50M-user payments app
+          — and led a 12-person design team. Today, 30,000+ agencies build on
+          Lindo to launch client websites at scale. I think in systems,
+          prototype in code, and care most about experiences people trust.
+        </motion.p>
       </div>
     </section>
   )

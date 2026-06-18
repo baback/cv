@@ -4,6 +4,7 @@ import WordsPullUp from '../components/WordsPullUp'
 
 const NAV_ITEMS = [
   { label: 'About', href: '#about' },
+  { label: 'Impact', href: '#companies' },
   { label: 'Work', href: '#work' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -61,21 +62,31 @@ export default function Hero() {
             />
           </div>
 
-          <div className="col-span-12 flex flex-col gap-5 lg:col-span-4 lg:pb-4">
-            <motion.p
-              className="text-xs leading-[1.2] text-[#E1E0CC]/70 sm:text-sm md:text-base"
+          <div className="col-span-12 flex flex-col gap-4 lg:col-span-4 lg:pb-4">
+            <motion.h1
+              className="text-2xl font-medium leading-[1.05] text-[#E1E0CC] sm:text-3xl md:text-[2rem]"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.5, ease }}
+              transition={{ duration: 0.8, delay: 0.4, ease }}
             >
-              Product designer and design lead, 13+ years turning ambiguous,
-              complex problems into clear systems and AI experiences people
-              trust.
+              I design AI products people{' '}
+              <span className="font-serif italic">actually trust.</span>
+            </motion.h1>
+
+            <motion.p
+              className="text-xs leading-[1.35] text-[#E1E0CC]/70 sm:text-sm"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.55, ease }}
+            >
+              Product designer & design lead, 13+ years. I co-founded Lindo.ai
+              and lead its design — the AI platform 30,000+ agencies use to build
+              1,000,000+ client websites.
             </motion.p>
 
             <motion.a
               href="#work"
-              className="group inline-flex w-fit items-center gap-2 rounded-full bg-[#DEDBC8] py-1.5 pl-5 pr-1.5 text-sm font-medium text-black transition-all hover:gap-3 sm:text-base"
+              className="group mt-1 inline-flex w-fit items-center gap-2 rounded-full bg-[#DEDBC8] py-1.5 pl-5 pr-1.5 text-sm font-medium text-black transition-all hover:gap-3 sm:text-base"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.7, ease }}
