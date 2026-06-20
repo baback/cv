@@ -9,6 +9,10 @@ export interface Showcase {
   role: string
   blurb: string
   highlights: string[]
+  /** if set, the card routes to this case-study page instead of showing inline highlights */
+  path?: string
+  /** mark the card as in-progress (not clickable, shows a "coming soon" state) */
+  comingSoon?: boolean
 }
 
 interface Props {
@@ -78,7 +82,7 @@ export default function ShowcaseModal({ showcase, onClose }: Props) {
             </button>
 
             <div className="relative">
-              <p className="text-[10px] uppercase tracking-[0.2em] text-primary sm:text-xs">
+              <p className="text-sm text-subtle">
                 {showcase.role}
               </p>
               <h3 className="mt-2 text-3xl font-medium text-primary sm:text-4xl">

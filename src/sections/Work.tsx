@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { ArrowRight, Lock } from 'lucide-react'
+import { ArrowRight, Clock } from 'lucide-react'
 import WordsPullUpMultiStyle from '../components/WordsPullUpMultiStyle'
 import type { Showcase } from '../components/ShowcaseModal'
 
@@ -9,6 +9,7 @@ export const SHOWCASES: Showcase[] = [
     id: 'lindo',
     title: 'Lindo.ai',
     role: 'Co-Founder & Head of Design',
+    path: '/work/lindo',
     blurb:
       'An agentic, AI-native website platform for agencies — generating, managing, and growing client websites at scale.',
     highlights: [
@@ -21,6 +22,7 @@ export const SHOWCASES: Showcase[] = [
     id: 'immigration',
     title: 'Lexpoint.io',
     role: 'Product Design Consultant · Legal-tech',
+    comingSoon: true,
     blurb:
       'A Canadian immigration legal-tech platform replacing costly consultations with instant, self-serve flows.',
     highlights: [
@@ -56,7 +58,8 @@ function ShowcaseCard({ showcase, index, onOpen }: CardProps) {
   return (
     <motion.button
       ref={ref}
-      onClick={() => onOpen(showcase)}
+      onClick={showcase.comingSoon ? undefined : () => onOpen(showcase)}
+      aria-disabled={showcase.comingSoon}
       initial={{ scale: 0.95, opacity: 0 }}
       animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.95, opacity: 0 }}
       transition={{
@@ -64,7 +67,9 @@ function ShowcaseCard({ showcase, index, onOpen }: CardProps) {
         delay: index * 0.15,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative flex h-[420px] flex-col justify-end overflow-hidden rounded-3xl bg-surface2 p-6 text-left sm:p-8"
+      className={`group relative flex h-[420px] flex-col justify-end overflow-hidden rounded-3xl bg-surface2 p-6 text-left sm:p-8 ${
+        showcase.comingSoon ? 'cursor-default' : ''
+      }`}
     >
       {/* Media background */}
       {media.type === 'video' ? (
@@ -85,15 +90,15 @@ function ShowcaseCard({ showcase, index, onOpen }: CardProps) {
       )}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
 
-      {/* Lock badge */}
-      <span className="absolute right-5 top-5 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[10px] text-[#E1E0CC]/80 backdrop-blur-sm sm:text-xs">
-        <Lock size={12} /> Password
-      </span>
+      {/* Status badge */}
+      {showcase.comingSoon && (
+        <span className="absolute right-5 top-5 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-[10px] text-[#E1E0CC]/80 backdrop-blur-sm sm:text-xs">
+          <Clock size={12} /> In progress
+        </span>
+      )}
 
       <div className="relative">
-        <p className="text-[10px] uppercase tracking-[0.2em] text-[#E1E0CC]/80 sm:text-xs">
-          {showcase.role}
-        </p>
+        <p className="text-xs text-[#E1E0CC]/80 sm:text-sm">{showcase.role}</p>
         <h3
           className="mt-2 text-3xl font-medium sm:text-4xl"
           style={{ color: '#E1E0CC' }}
@@ -102,10 +107,16 @@ function ShowcaseCard({ showcase, index, onOpen }: CardProps) {
         </h3>
         <p className="mt-3 max-w-md text-sm text-gray-300">{showcase.blurb}</p>
 
-        <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#E1E0CC] transition-all group-hover:gap-3">
-          View case study
-          <ArrowRight size={16} className="-rotate-45 transition-transform" />
-        </span>
+        {showcase.comingSoon ? (
+          <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#E1E0CC]/60">
+            Case study coming soon
+          </span>
+        ) : (
+          <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-[#E1E0CC] transition-all group-hover:gap-3">
+            View case study
+            <ArrowRight size={16} className="-rotate-45 transition-transform" />
+          </span>
+        )}
       </div>
     </motion.button>
   )

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Download } from 'lucide-react'
 import WordsPullUp from '../components/WordsPullUp'
 
 const NAV_ITEMS = [
@@ -84,18 +84,32 @@ export default function Hero() {
               1,000,000+ client websites.
             </motion.p>
 
-            <motion.a
-              href="#work"
-              className="group mt-1 inline-flex w-fit items-center gap-2 rounded-full bg-[#DEDBC8] py-1.5 pl-5 pr-1.5 text-sm font-medium text-black transition-all hover:gap-3 sm:text-base"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.7, ease }}
-            >
-              View work
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black transition-transform group-hover:scale-110 sm:h-10 sm:w-10">
-                <ArrowRight size={18} style={{ color: '#E1E0CC' }} />
-              </span>
-            </motion.a>
+            <div className="flex flex-wrap items-center gap-4">
+              <motion.a
+                href="#work"
+                className="group inline-flex w-fit items-center gap-2 rounded-full bg-[#DEDBC8] py-1.5 pl-5 pr-1.5 text-sm font-medium text-black transition-all hover:gap-3 sm:text-base"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.7, ease }}
+              >
+                View work
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black transition-transform group-hover:scale-110 sm:h-10 sm:w-10">
+                  <ArrowRight size={18} style={{ color: '#E1E0CC' }} />
+                </span>
+              </motion.a>
+
+              <motion.a
+                href="/Babak_Jafari_Resume.pdf"
+                download="Babak_Jafari_Resume.pdf"
+                className="group inline-flex w-fit items-center gap-2 text-sm font-medium text-[#E1E0CC]/80 transition-colors hover:text-[#E1E0CC] sm:text-base"
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.8, ease }}
+              >
+                Download CV
+                <Download size={16} className="transition-transform group-hover:translate-y-0.5" />
+              </motion.a>
+            </div>
           </div>
         </div>
       </div>

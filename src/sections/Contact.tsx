@@ -1,4 +1,4 @@
-import { MapPin, Linkedin } from 'lucide-react'
+import { MapPin, Linkedin, Download } from 'lucide-react'
 import { CONTACT } from '../config'
 import { ThemeToggle } from '../theme'
 
@@ -17,7 +17,7 @@ export default function Contact() {
   return (
     <section id="contact" className="bg-page px-4 pb-10 pt-20 md:pt-28">
       <div className="mx-auto max-w-6xl rounded-3xl bg-surface px-6 py-16 sm:px-10 md:py-20">
-        <p className="text-[10px] uppercase tracking-[0.2em] text-primary sm:text-xs">
+        <p className="text-sm text-subtle">
           Get in touch
         </p>
         <h2 className="mt-6 max-w-2xl text-3xl leading-[0.95] sm:text-4xl md:text-5xl">
@@ -29,7 +29,17 @@ export default function Contact() {
           </span>
         </h2>
 
-        <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-sm sm:text-base">
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm sm:text-base">
+          <a
+            href="/Babak_Jafari_Resume.pdf"
+            download="Babak_Jafari_Resume.pdf"
+            className="group inline-flex items-center gap-2 rounded-full bg-primary py-2 pl-5 pr-2 font-medium text-on-primary transition-all hover:gap-3"
+          >
+            Download CV
+            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-on-primary/15">
+              <Download size={15} />
+            </span>
+          </a>
           <a
             href={CONTACT.linkedin}
             target="_blank"
@@ -44,7 +54,7 @@ export default function Contact() {
         </div>
 
         <div className="mt-12 border-t border-line/10 pt-8">
-          <p className="text-xs uppercase tracking-[0.2em] text-subtle">
+          <p className="text-sm text-subtle">
             Tools & craft
           </p>
           <div className="mt-4 flex flex-wrap gap-2">

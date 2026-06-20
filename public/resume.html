@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Babak Jafari — Resume</title>
+<style>
+  :root{
+    --ink:#161616;
+    --soft:#3a3a3a;
+    --muted:#8c8c8c;
+    --sidebar:#f3f3f4;
+    --bar:#ebebec;
+    --line:#e4e4e6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#fff;color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    font-size:11.5px;line-height:1.4;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  /* PAGE — Letter (8.5x11) */
+  .page{width:8.5in;min-height:11in;margin:0 auto;background:#fff;
+    display:flex;gap:16px;padding:16px}
+
+  h2.bar{background:var(--bar);color:var(--ink);font-size:10.5px;font-weight:700;
+    padding:5px 10px;border-radius:8px;margin:11px 0 7px;letter-spacing:1.1px;text-transform:uppercase}
+
+  /* ---------- SIDEBAR (rounded card) ---------- */
+  .side{width:33%;background:var(--sidebar);border-radius:16px;padding:18px 16px}
+  .side h2.bar:first-of-type{margin-top:12px}
+  .photo{position:relative;overflow:hidden;width:120px;height:120px;border-radius:50%;margin:0 auto 16px;
+    background:linear-gradient(135deg,#cfcfd2,#5f5f63);color:#fff;font-size:42px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;letter-spacing:1px}
+  .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+  .name{font-size:23px;font-weight:800;line-height:1.12;text-align:center;letter-spacing:-.2px}
+  .role-title{color:var(--soft);font-weight:600;font-size:12px;margin-top:4px;text-align:center}
+  .links{margin-top:15px;display:flex;flex-direction:column;gap:8px}
+  .links a{color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:9px;font-size:12px;word-break:break-all}
+  .about{font-size:11.5px;color:var(--soft);line-height:1.5}
+  .about p{margin-bottom:7px}
+  .about b{color:var(--ink);font-weight:700}
+  .contact div{display:flex;align-items:flex-start;gap:9px;margin-bottom:9px;font-size:12.2px}
+  .contact svg{flex:0 0 15px;margin-top:2px}
+  .edu strong{display:block;font-weight:700}
+  .edu span{color:var(--muted);font-size:12px}
+
+  /* ---------- MAIN ---------- */
+  .main{width:67%;padding:2px 6px 2px 2px}
+  .main h2.bar:first-of-type{margin-top:2px}
+  .role{margin-bottom:9px}
+  .role-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .role-title-l{font-weight:800;font-size:12.5px;letter-spacing:-.1px}
+  .role-co{color:var(--soft);font-weight:600;font-size:11.3px;margin-top:1px}
+  .role-dates{color:var(--muted);font-size:10.5px;white-space:nowrap}
+  .role ul{list-style:none;margin-top:3px}
+  .role ul li{position:relative;padding-left:14px;margin-bottom:2px;font-size:11.3px;color:var(--soft)}
+  .role ul li:before{content:"";position:absolute;left:0;top:7px;width:5px;height:5px;
+    border-radius:50%;background:var(--ink)}
+  .role ul li b{font-weight:700;color:var(--ink)}
+  .earlier{font-size:12.1px;color:var(--soft);margin-top:2px}
+
+  /* skills / tools grid */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px;margin-top:4px}
+  .grid div{display:flex;align-items:center;gap:9px;font-size:11.3px}
+  .ic{width:17px;height:17px;flex:0 0 17px;color:#4f46e5;stroke:#4f46e5;fill:none;
+    stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .fav{width:17px;height:17px;flex:0 0 17px;border-radius:4px;object-fit:contain;opacity:1}
+
+  @media print{
+    html,body{background:#fff}
+    .page{margin:0;width:100%;min-height:11in;box-shadow:none}
+    @page{size:Letter;margin:0}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="side">
+    <div class="photo"><span>BJ</span><img src="profile.jpg" alt="" onerror="this.remove()"></div>
+    <div class="name">Babak Jafari</div>
+    <div class="role-title">Product Designer · Design Lead</div>
+
+    <div class="links">
+      <a href="https://www.linkedin.com/in/thebabakjafari">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="#161616"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21h-4z"/></svg>
+        linkedin.com/in/thebabakjafari
+      </a>
+      <a href="https://baback.xyz">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/></svg>
+        baback.xyz
+      </a>
+    </div>
+
+    <h2 class="bar">About me</h2>
+    <div class="about">
+      <p>Product designer and design lead — <b>13+ years</b> turning messy, high-stakes problems into clear systems and AI experiences people actually trust.</p>
+      <p>I co-founded <b>Lindo.ai</b> and trained its AI to design with taste; today <b>30,000+ agencies</b> build on it. Before that, I led design for products used by tens of millions and managed a 12-person team.</p>
+      <p>I think in systems, prototype in real code, and move fast with AI — but what I care about most is the person on the other side of the screen.</p>
+    </div>
+
+    <h2 class="bar">Contact</h2>
+    <div class="contact">
+      <div>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        baback.xyz@gmail.com
+      </div>
+      <div>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+        +1 604 445 3891
+      </div>
+      <div>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#161616" stroke-width="2"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        Vancouver, BC, Canada
+      </div>
+    </div>
+
+    <h2 class="bar">Education</h2>
+    <div class="edu">
+      <strong>Associate's, Computer Engineering</strong>
+      <span>Sadjad University of Technology · 2007–2013</span>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main">
+    <h2 class="bar">Experience</h2>
+
+    <div class="role">
+      <div class="role-head"><div><div class="role-title-l">Co-Founder &amp; Head of Design</div><div class="role-co">Lindo.ai</div></div><div class="role-dates">Jan 2023 – Present</div></div>
+      <ul>
+        <li><b>Scaled Lindo to 30,000+ agencies who have built 1,000,000+ client websites</b>, leading design across AI generation, delivery, and growth.</li>
+        <li>Trained the platform's AI to design with taste, so generated sites come out on-brand and client-ready.</li>
+        <li>Built a <b>1,000+ block-and-template design system</b> — the foundation the entire product runs on.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><div><div class="role-title-l">Product Design Consultant</div><div class="role-co">Lexpoint.io</div></div><div class="role-dates">Jun 2025 – Apr 2026</div></div>
+      <ul>
+        <li>Designed an AI eligibility assessment that <b>scores applicants across 60+ immigration programs</b> and shows them how to qualify, for a Canadian legal-tech platform.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><div><div class="role-title-l">Co-Founder &amp; Designer</div><div class="role-co">Lindo Card</div></div><div class="role-dates">Jun 2021 – Jul 2022</div></div>
+      <ul>
+        <li>Designed a <b>0→1 Visa-backed flexible-benefits product</b> end to end — program setup, payroll/HRIS sync, and card spend.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><div><div class="role-title-l">Product Design Consultant</div><div class="role-co">ROOMVU</div></div><div class="role-dates">Aug 2020 – Mar 2021</div></div>
+      <ul>
+        <li>Built the <b>first design system from scratch</b> and rebuilt the dashboards for an AI marketing platform used by 350,000+ real-estate professionals.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><div><div class="role-title-l">Lead Product Designer</div><div class="role-co">Asan Pardakht</div></div><div class="role-dates">Apr 2019 – Feb 2021</div></div>
+      <ul>
+        <li>Redesigned core flows for an <b>e-payments app used by 50M+ people</b>, improving activation through behavioral data.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><div><div class="role-title-l">Product Design Manager</div><div class="role-co">TiaraUXD</div></div><div class="role-dates">May 2016 – Sep 2017</div></div>
+      <ul>
+        <li>Led and mentored a <b>12-person design team</b> shipping for clients reaching 30M+ users across fintech, telecom, and media.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-head"><div><div class="role-title-l">Lead UX/UI Designer</div><div class="role-co">HyperOffice</div></div><div class="role-dates">Jan 2012 – Apr 2016</div></div>
+      <ul>
+        <li>Led product design across web, iOS, and Android for an <b>enterprise SaaS suite used by 2M+ people</b>; built its design system.</li>
+      </ul>
+    </div>
+
+    <p class="earlier"><b>Earlier:</b> Product Design Consultant — Mofid Securities &amp; Kian Digital (fintech / wealth-tech).</p>
+
+    <h2 class="bar">Skill Set</h2>
+    <div class="grid">
+      <div><svg class="ic" viewBox="0 0 24 24"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>Design systems &amp; libraries</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.3L12 15l-1.8-4.7L5.5 9l4.7-1.3L12 3Z"/><path d="M19 14l.6 1.7 1.9.6-1.9.6L19 19l-.6-1.5-1.9-.6 1.9-.6L19 14Z"/></svg>AI product &amp; interaction design</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.4"/><circle cx="18" cy="5" r="2.4"/><path d="M8 19h6a4 4 0 0 0 0-8h-4a4 4 0 0 1 0-8h4"/></svg>End-to-end product design</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>UX research &amp; usability testing</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.4"/><circle cx="5" cy="19" r="2.4"/><circle cx="19" cy="19" r="2.4"/><path d="M12 7.4v3.6M11 12.3 6.5 16.8M13 12.3 17.5 16.8"/></svg>Information architecture</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor" stroke="none"/></svg>Design strategy &amp; roadmap</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4"/></svg>Prototyping in code</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><path d="M16 5.5a3 3 0 0 1 0 5.4M21 20a6 6 0 0 0-5-5.9"/></svg>Design leadership &amp; mentoring</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5.4A8 8 0 1 1 21 12Z"/></svg>Cross-functional collaboration</div>
+      <div><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="4.5" r="1.6"/><path d="M5 8.5c2 1 4.5 1.5 7 1.5s5-.5 7-1.5"/><path d="M12 10v5M12 15l-3 6M12 15l3 6"/></svg>Accessibility &amp; inclusive design</div>
+    </div>
+
+    <h2 class="bar">Tools &amp; Technologies</h2>
+    <div class="grid">
+      <div><img class="fav" src="https://www.google.com/s2/favicons?domain=figma.com&sz=64" onerror="this.style.display='none'">Figma</div>
+      <div><img class="fav" src="https://www.google.com/s2/favicons?domain=cursor.com&sz=64" onerror="this.style.display='none'">Cursor</div>
+      <div><img class="fav" src="https://www.google.com/s2/favicons?domain=framer.com&sz=64" onerror="this.style.display='none'">Framer</div>
+      <div><img class="fav" src="https://www.google.com/s2/favicons?domain=claude.ai&sz=64" onerror="this.style.display='none'">Claude</div>
+      <div><img class="fav" src="https://www.google.com/s2/favicons?domain=miro.com&sz=64" onerror="this.style.display='none'">Miro</div>
+      <div><img class="fav" src="https://www.google.com/s2/favicons?domain=notion.so&sz=64" onerror="this.style.display='none'">Notion</div>
+      <div><img class="fav" src="https://www.google.com/s2/favicons?domain=clickup.com&sz=64" onerror="this.style.display='none'">ClickUp</div>
+      <div><img class="fav" src="https://www.google.com/s2/favicons?domain=usertesting.com&sz=64" onerror="this.style.display='none'">UserTesting</div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

@@ -2,6 +2,9 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+.env.*
+!.env.example
 *.tsbuildinfo
 vite.config.js
 vite.config.d.ts
@@ -11,3 +14,13 @@ vite.config.d.ts
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Source material & reference (not part of the deployed site)
+/clio use-case/
+/wireframe/
+/backups/
+/profile.jpeg
+/Babak_Jafari_Resume.html
+public/work/lindo/wires/
+public/work/lindo-v2/
+public/work/lindo2/

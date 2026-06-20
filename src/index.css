@@ -15,16 +15,16 @@
   --font-serif: 'Instrument Serif', serif;
 }
 
-/* ── Light theme (default) — taupe family ── */
+/* ── Light theme (default) — clean white + neutral grey ── */
 :root {
-  --c-page: 227 220 210; /* pale taupe */
-  --c-surface: 239 234 226; /* light taupe card */
-  --c-surface2: 233 226 216;
-  --c-primary: 68 62 52; /* dark taupe text/accent */
-  --c-on-primary: 239 234 226;
-  --c-muted: 122 114 100;
-  --c-subtle: 154 145 131;
-  --c-line: 68 62 52;
+  --c-page: 247 247 246; /* near-white */
+  --c-surface: 255 255 255; /* white cards */
+  --c-surface2: 241 241 240;
+  --c-primary: 36 36 36; /* near-black grey — primary text */
+  --c-on-primary: 250 250 250;
+  --c-muted: 92 92 92; /* body grey */
+  --c-subtle: 148 148 148; /* light grey */
+  --c-line: 17 17 17;
 }
 
 /* ── Dark theme — black + warm cream ── */
