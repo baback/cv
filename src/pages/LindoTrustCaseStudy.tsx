@@ -74,7 +74,7 @@ function CaseStudy() {
 
       <article className="px-4 pb-24">
         <Column>
-          <CaseImage src="/cover.png" alt="Lindo Agentic — case study cover" />
+          <CaseImage src="/cover.webp" alt="Lindo Agentic — case study cover" />
 
           {/* What is an agentic website platform */}
           <SectionNumber>What is an agentic website platform?</SectionNumber>
@@ -165,10 +165,10 @@ function CaseStudy() {
             and ran much of sales and marketing, sitting at the center of a
             nine-person cross-functional team that grew as the product scaled.
           </P>
-          <CaseImage src="/work/lindo/ln-1.png" alt="Team structure — core trio and wider team" />
+          <CaseImage src="/work/lindo/ln-1.webp" alt="Team structure — core trio and wider team" />
 
           {/* Divider */}
-          <CaseImage src="/work/lindo/ln-2.png" alt="The design process" />
+          <CaseImage src="/work/lindo/ln-2.webp" alt="The design process" />
 
           {/* Research */}
           <SectionNumber>Research and understanding</SectionNumber>
@@ -182,7 +182,7 @@ function CaseStudy() {
             what they kept asking for. The recurring signal wasn&apos;t about
             quality — it was about fear of losing control.
           </P>
-          <CaseImage src="/work/lindo/ln-3.png" alt="Research — agency quotes about trust and control" />
+          <CaseImage src="/work/lindo/ln-3.webp" alt="Research — agency quotes about trust and control" />
 
           {/* Competitive analysis */}
           <SectionNumber>Competitive analysis</SectionNumber>
@@ -193,7 +193,7 @@ function CaseStudy() {
             were built around the agency&apos;s real job of delivering and
             managing sites for clients with confidence.
           </P>
-          <CaseImage src="/work/lindo/ln-4.png" alt="Competitive analysis — market gaps vs. Lindo advantages" />
+          <CaseImage src="/work/lindo/ln-4.webp" alt="Competitive analysis — market gaps vs. Lindo advantages" />
           <P>
             <span className="font-semibold text-primary">Key takeaway — </span>
             Lindo doesn&apos;t win by generating a slightly better website. It
@@ -207,11 +207,11 @@ function CaseStudy() {
             I designed for the people running web-design businesses and the
             clients they serve — and the product had to hold both at once.
           </P>
-          <CaseImage src="/work/lindo/ln-5.png" alt="User archetypes — Agency, Freelancer, Client" />
+          <CaseImage src="/work/lindo/ln-5.webp" alt="User archetypes — Agency, Freelancer, Client" />
 
           {/* Build & edit flow */}
           <SectionNumber>Agent build-and-edit flow</SectionNumber>
-          <CaseImage src="/work/lindo/ln-6.png" alt="Agent build-and-edit flow" />
+          <CaseImage src="/work/lindo/ln-6.webp" alt="Agent build-and-edit flow" />
 
           {/* Explorations */}
           <SectionNumber>Explorations and usability testing</SectionNumber>
@@ -239,14 +239,14 @@ function CaseStudy() {
           />
           <ImageGrid
             images={[
-              { src: '/work/lindo/wires-lofi/wf-1.png', alt: 'Wireframe exploration 1' },
-              { src: '/work/lindo/wires-lofi/wf-2.png', alt: 'Wireframe exploration 2' },
-              { src: '/work/lindo/wires-lofi/wf-3.png', alt: 'Wireframe exploration 3' },
-              { src: '/work/lindo/wires-lofi/wf-4.png', alt: 'Wireframe exploration 4' },
-              { src: '/work/lindo/wires-lofi/wf-5.png', alt: 'Wireframe exploration 5' },
-              { src: '/work/lindo/wires-lofi/wf-6.png', alt: 'Wireframe exploration 6' },
-              { src: '/work/lindo/wires-lofi/wf-7.png', alt: 'Wireframe exploration 7' },
-              { src: '/work/lindo/wires-lofi/wf-8.png', alt: 'Wireframe exploration 8' },
+              { src: '/work/lindo/wires-lofi/wf-1.webp', alt: 'Wireframe exploration 1' },
+              { src: '/work/lindo/wires-lofi/wf-2.webp', alt: 'Wireframe exploration 2' },
+              { src: '/work/lindo/wires-lofi/wf-3.webp', alt: 'Wireframe exploration 3' },
+              { src: '/work/lindo/wires-lofi/wf-4.webp', alt: 'Wireframe exploration 4' },
+              { src: '/work/lindo/wires-lofi/wf-5.webp', alt: 'Wireframe exploration 5' },
+              { src: '/work/lindo/wires-lofi/wf-6.webp', alt: 'Wireframe exploration 6' },
+              { src: '/work/lindo/wires-lofi/wf-7.webp', alt: 'Wireframe exploration 7' },
+              { src: '/work/lindo/wires-lofi/wf-8.webp', alt: 'Wireframe exploration 8' },
             ]}
           />
 
@@ -278,7 +278,7 @@ function CaseStudy() {
             wasn&apos;t a nice-to-have — it was the precondition for using the
             agent at all.
           </P>
-          <CaseImage src="/work/lindo/ln-7.png" alt="Edit & control — agency quotes on reversibility and scope" />
+          <CaseImage src="/work/lindo/ln-7.webp" alt="Edit & control — agency quotes on reversibility and scope" />
 
           {/* Scoping the MVP */}
           <SectionNumber>Scoping the MVP</SectionNumber>
@@ -286,7 +286,7 @@ function CaseStudy() {
             We balanced agency needs against engineering reality to decide what
             shipped first.
           </P>
-          <CaseImage src="/work/lindo/ln-8.png" alt="MVP scope — prioritized vs. deferred" />
+          <CaseImage src="/work/lindo/ln-8.webp" alt="MVP scope — prioritized vs. deferred" />
 
           {/* Finalizing designs */}
           <SectionNumber>Finalizing designs</SectionNumber>
@@ -306,7 +306,7 @@ function CaseStudy() {
             view that makes the agent&apos;s work legible. Each existed to convert
             hesitation into confidence, and to keep power and safety coexisting.
           </P>
-          <CaseImage src="/editor.png" alt="The polished agent editor — Figma-style canvas with select mode, layers, and the what-changed preview" />
+          <CaseImage src="/editor.webp" alt="The polished agent editor — Figma-style canvas with select mode, layers, and the what-changed preview" />
 
           {/* Go-to-market */}
           <SectionNumber>Go-to-market and launch</SectionNumber>
@@ -323,7 +323,7 @@ function CaseStudy() {
             [ +xx% ]. The insight: agencies don&apos;t self-serve into a platform
             decision — they need a person.
           </P>
-          <CaseImage src="/dashboard.png" alt="The white-label agency dashboard" />
+          <CaseImage src="/dashboard.webp" alt="The white-label agency dashboard" />
 
           {/* Monetization */}
           <SectionNumber>Monetization and model</SectionNumber>
