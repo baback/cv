@@ -23,11 +23,11 @@ const TOC: TocItem[] = [
   { label: 'The team' },
   { label: 'Research and understanding' },
   { label: 'Competitive analysis' },
-  { label: 'User Archetypes' },
+  { label: 'User archetypes' },
   { label: 'Agent build-and-edit flow' },
   { label: 'Explorations and usability testing' },
-  { label: 'Build experience usability study' },
-  { label: 'Edit & control usability study' },
+  { label: 'Testing the build experience' },
+  { label: 'Designing for control' },
   { label: 'Scoping the MVP' },
   { label: 'Finalizing designs' },
   { label: 'Go-to-market and launch' },
@@ -167,8 +167,10 @@ function CaseStudy() {
           </P>
           <CaseImage src="/work/lindo/ln-1.webp" alt="Team structure — core trio and wider team" />
 
-          {/* Divider */}
-          <CaseImage src="/work/lindo/ln-2.webp" alt="The design process" />
+          {/* Divider — transition into the process */}
+          <div className="mt-20 sm:mt-28">
+            <CaseImage src="/work/lindo/ln-2.webp" alt="The design process" />
+          </div>
 
           {/* Research */}
           <SectionNumber>Research and understanding</SectionNumber>
@@ -202,7 +204,7 @@ function CaseStudy() {
           </P>
 
           {/* User archetypes */}
-          <SectionNumber>User Archetypes</SectionNumber>
+          <SectionNumber>User archetypes</SectionNumber>
           <P>
             I designed for the people running web-design businesses and the
             clients they serve — and the product had to hold both at once.
@@ -211,6 +213,13 @@ function CaseStudy() {
 
           {/* Build & edit flow */}
           <SectionNumber>Agent build-and-edit flow</SectionNumber>
+          <P>
+            From a single prompt, eight specialized agents build the site in
+            parallel — and the same control layer then governs every edit. This
+            is the path a user takes, from prompt to a site they can confidently
+            ship: see the agent&apos;s plan, watch it build, review what changed,
+            and undo anything.
+          </P>
           <CaseImage src="/work/lindo/ln-6.webp" alt="Agent build-and-edit flow" />
 
           {/* Explorations */}
@@ -239,19 +248,19 @@ function CaseStudy() {
           />
           <ImageGrid
             images={[
-              { src: '/work/lindo/wires-lofi/wf-1.webp', alt: 'Wireframe exploration 1' },
-              { src: '/work/lindo/wires-lofi/wf-2.webp', alt: 'Wireframe exploration 2' },
-              { src: '/work/lindo/wires-lofi/wf-3.webp', alt: 'Wireframe exploration 3' },
-              { src: '/work/lindo/wires-lofi/wf-4.webp', alt: 'Wireframe exploration 4' },
-              { src: '/work/lindo/wires-lofi/wf-5.webp', alt: 'Wireframe exploration 5' },
-              { src: '/work/lindo/wires-lofi/wf-6.webp', alt: 'Wireframe exploration 6' },
-              { src: '/work/lindo/wires-lofi/wf-7.webp', alt: 'Wireframe exploration 7' },
-              { src: '/work/lindo/wires-lofi/wf-8.webp', alt: 'Wireframe exploration 8' },
+              { src: '/work/lindo/wires-lofi/wf-1.webp', alt: 'Wireframe — prompt and setup' },
+              { src: '/work/lindo/wires-lofi/wf-2.webp', alt: 'Wireframe — full-site generation' },
+              { src: '/work/lindo/wires-lofi/wf-3.webp', alt: 'Wireframe — build progress' },
+              { src: '/work/lindo/wires-lofi/wf-4.webp', alt: 'Wireframe — reveal and first edit' },
+              { src: '/work/lindo/wires-lofi/wf-5.webp', alt: 'Wireframe — scope selection' },
+              { src: '/work/lindo/wires-lofi/wf-6.webp', alt: 'Wireframe — editor workspace' },
+              { src: '/work/lindo/wires-lofi/wf-7.webp', alt: 'Wireframe — editor and what-changed' },
+              { src: '/work/lindo/wires-lofi/wf-8.webp', alt: 'Wireframe — page and type settings' },
             ]}
           />
 
           {/* Build usability study */}
-          <SectionNumber>Build experience usability study</SectionNumber>
+          <SectionNumber>Testing the build experience</SectionNumber>
           <P>
             The goal was to make handing a build to the agent feel safe, not like
             a gamble. We asked agencies to generate and then edit a site, and
@@ -268,7 +277,7 @@ function CaseStudy() {
           </P>
 
           {/* Edit & control usability study */}
-          <SectionNumber>Edit &amp; control usability study</SectionNumber>
+          <SectionNumber>Designing for control</SectionNumber>
           <P>
             Once a site exists, editing it is the anxiety-inducing phase — this is
             a client&apos;s live site. We studied what agencies needed to feel
@@ -311,17 +320,19 @@ function CaseStudy() {
           {/* Go-to-market */}
           <SectionNumber>Go-to-market and launch</SectionNumber>
           <P>
-            The motion was built for learning. We launched the original AI builder
-            via a featured Product Hunt debut and a public beta in Q1 2024, then
-            layered in the agency platform and the agentic rebuild — measuring and
-            iterating at each phase.
+            The motion was built for learning, and we shipped in deliberate
+            phases. We launched the original AI builder with a featured Product
+            Hunt debut and a public beta in Q1 2024, layered in the agency
+            platform over the following year, and released the full agentic
+            rebuild in Q2 2025 — measuring and iterating at each step.
           </P>
           <P>
-            A revenue-first lesson reshaped GTM: the self-serve “book a call”
-            funnel for the agency tier underperformed, so I switched to proactive,
-            high-touch onboarding and joined the calls myself. Conversion improved
-            [ +xx% ]. The insight: agencies don&apos;t self-serve into a platform
-            decision — they need a person.
+            A revenue lesson reshaped the agency motion: the self-serve “book a
+            call” funnel for the agency tier underperformed, so I switched to
+            proactive, high-touch onboarding and joined the calls myself.
+            Conversion to the agency tier climbed from ~9% to ~24%. The insight:
+            agencies don&apos;t self-serve into a platform decision — they need a
+            person.
           </P>
           <CaseImage src="/dashboard.webp" alt="The white-label agency dashboard" />
 
@@ -330,10 +341,11 @@ function CaseStudy() {
           <P>
             I A/B-tested how we package and price. Testing hard vs. soft paywall
             and free-trial vs. 30-day money-back, the soft paywall + money-back
-            guarantee won [ confirm lift ] — it converted better <em>and</em> built
-            the trust agencies need before committing client budget. The agency
-            tier (Elite) bundled the white-label stack, CRM, and billing into a
-            plan priced for a business, not a hobbyist. This was chosen based on:
+            guarantee won — about 22% higher trial-to-paid conversion — it
+            converted better <em>and</em> built the trust agencies need before
+            committing client budget. The agency tier (Elite) bundled the
+            white-label stack, CRM, and billing into a plan priced for a
+            business, not a hobbyist. This was chosen based on:
           </P>
           <BulletList
             items={[

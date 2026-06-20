@@ -34,19 +34,19 @@ export const sets = {
       id: 'ln-2',
       file: 'ln-2.png',
       prompt:
-        'A full-width section divider banner. Centered serif-style title "The design process". Behind it, a faint double-diamond motif (discover → define → develop → deliver). Calm, minimal.',
+        "A full-width section-divider banner. The title 'The design process' sits ON TOP, above a clear DOUBLE-DIAMOND diagram (two diamond shapes side by side, thin indigo lines) — the diamonds must be fully visible and NOT overlapped by the title. Four phase labels beneath the diamonds: Discover, Define, Develop, Deliver. Off-white background, minimal and editorial.",
     },
     {
       id: 'ln-3',
       file: 'ln-3.png',
       prompt:
-        'Three quote cards side by side, each with a large quotation mark. Card 1: "It built a whole site from one sentence — but it\'s my client\'s site, I need to know it\'s right before I send it." — Agency owner. Card 2: "I\'m scared to let it edit the homepage. What if it changes things I can\'t get back?" — Freelance designer. Card 3: "If I can see what it\'s doing and undo it, I\'ll use it on every client." — Studio founder.',
+        "Three polished, realistic testimonial cards in a row (like real product-review cards). Each card: a circular avatar placeholder (soft grey simple silhouette) at top, a small indigo quotation mark, the quote in readable body text, and a role label beneath in muted grey (roles only, no full names). Card 1: \"It built a whole site from one sentence — amazing, but it's my client's reputation on the line. I need to know it's right before I send it.\" — Agency owner. Card 2: \"I was scared to let it touch the homepage. What if it changes something I can't get back?\" — Freelance designer. Card 3: \"The moment I could see what it did and undo it, I started using it on every client.\" — Studio founder. Soft card surfaces, subtle shadow, generous padding, equal heights, consistent layout.",
     },
     {
       id: 'ln-4',
       file: 'ln-4.png',
       prompt:
-        'Two comparison cards. Left card "Market gaps" (soft rose, ✗ marks): Generation-only; black-box edits; no white-label layer; no undo/version history; built for end-users not agencies. Right card "Lindo advantages" (soft green, ✓ marks): full multi-page sites from one prompt; visible controllable agent; true white-label; built-in CRM + billing; designed for agency and client at once.',
+        "A clear two-column comparison. LEFT column header 'Other AI builders', every row prefixed by a soft-ROSE ✗: Generation only · Black-box edits · No white-label · No undo / version history · Built for end-users. RIGHT column header 'Lindo', every row prefixed by a soft-GREEN ✓: Full multi-page from one prompt · Visible build progress · Undo + version history · Scoped edits · White-label brand · Built-in CRM + billing. Strong green-check vs rose-✗ color coding so the contrast is instantly scannable. White cards, clean grid.",
     },
     {
       id: 'ln-5',
@@ -58,19 +58,19 @@ export const sets = {
       id: 'ln-6',
       file: 'ln-6.png',
       prompt:
-        'A vertical boxes-and-arrows flowchart of the agent build-and-edit flow: Prompt entry → Agent reflects back what it understood → Agents build all pages in parallel (visible page-by-page progress) → Reveal that invites editing → Edit mode: select what the agent can touch (scope control) → Agent proposes change → "Here\'s what changed" preview → Approve / Undo / Page-history rollback. Each step a rounded box with a small indigo icon.',
+        "A vertical boxes-and-arrows flowchart of the agent build-and-edit flow: Prompt entry → Agent reflects back what it understood → Agents build all pages in parallel (visible page-by-page progress) → Reveal that invites editing → Edit mode: select what the agent can touch (scope control) → Agent proposes change → \"Here's what changed\" preview → Approve / Undo / Page-history rollback. Each step a rounded box with a small indigo line icon, connected top-to-bottom by thin arrows. Show ONLY this single vertical sequence of connected boxes — no extra grid, panel, legend, or screen mockup beside or below it.",
     },
     {
       id: 'ln-7',
       file: 'ln-7.png',
       prompt:
-        'Three quote cards about trust and control. Card 1: "Once I could undo anything, I stopped being scared of it. Now I use it on every site." — Agency owner. Card 2: "Showing me exactly what it changed is everything — I\'m responsible to my client." — Freelancer. Card 3: "Letting me lock the parts I don\'t want touched is what made me trust it with the homepage." — Studio founder.',
+        "Three polished, realistic testimonial cards in a row (like real product-review cards), about trust and control once editing was reversible. Each card: a circular avatar placeholder (soft grey simple silhouette) at top, a small indigo quotation mark, the quote in readable body text, and a role label beneath in muted grey (roles only, no full names). Card 1: \"Once I knew I could undo anything, I stopped being scared of it — now I use it on every site.\" — Agency owner. Card 2: \"Seeing exactly what it changed is everything. I'm accountable to my client, so I have to see it.\" — Freelancer. Card 3: \"Being able to lock the parts I didn't want touched is what made me trust it with the homepage.\" — Studio founder. Soft card surfaces, subtle shadow, generous padding, equal heights, consistent layout.",
     },
     {
       id: 'ln-8',
       file: 'ln-8.png',
       prompt:
-        'Two MVP scope cards. Left "Prioritized" (soft green, ✓): prompt → full multi-page site; visible build progress; Figma-style editor (select mode, layers); undo/redo + page-history; "what changed" preview; white-label brand. Right "Deferred" (muted, ○): team approval workflows; agent explainability; multi-site bulk edits; deeper CRM automation; public agent API / MCP ecosystem.',
+        "Two MVP scope columns. LEFT column titled 'Prioritized' in SOFT GREEN (#16A34A) — its title, its header icon, and every item's check mark ✓ are all soft green (never blue/indigo): 'Prompt → full multi-page site', 'Visible build progress', 'Figma-style editor (select mode, layers)', 'Undo/redo + page-history', '\"What changed\" preview', 'White-label brand'. RIGHT column titled 'Deferred' in muted GREY — every item prefixed with a muted grey hollow circle ○: 'Team approval workflows', 'Agent explainability', 'Multi-site bulk edits', 'Deeper CRM automation', 'Public agent API / MCP'. Clean two-column layout, consistent icons throughout.",
     },
     ],
   },
@@ -78,22 +78,23 @@ export const sets = {
   // Low-fidelity wireframes — converts real screenshots into clean low-fi sketches.
   wireframe: {
     style: `
-Convert this screenshot into a clean LOW-FIDELITY WIREFRAME:
-- Grayscale only: white background, light-grey (#EDEDED) fill blocks, mid-grey (#9AA0A6) lines, dark-grey outlines. No brand colors, no real photos.
-- Represent images/media as a rectangle with an X or mountain-photo glyph. Represent text as horizontal grey bars/lines (longer = headings, shorter = body). Buttons as rounded rectangles with a short bar label.
-- Keep the SAME overall layout, structure, and proportions as the source so it reads as the same screen — just abstracted to a sketch.
-- Thin 1.5px outlines, slightly hand-drawn/blueprint feel, generous spacing. No noise, no gradients, no shadows.
-- It should look like an early-stage UX wireframe a designer would make in Figma/Balsamiq.
+Convert this screenshot into a clean MID-FIDELITY wireframe — a testable Figma-style mockup:
+- KEEP ALL TEXT LEGIBLE and in place: headings, menu items, button labels, field labels, table headers, body copy stay as actual readable text. DO NOT replace text with grey bars, lines, or lorem gibberish — preserve the real words from the screenshot.
+- Simplify the visuals around the text: flat light-grey (#ECECEC) rectangles for images/media (with a tiny image glyph), thin 1.5px outlines for cards, panels, and inputs, buttons as outlined rounded rectangles showing their real label.
+- Mostly grayscale on white with at most one restrained light-indigo accent for the primary action. No photos, no gradients, no shadows, no brand colors.
+- Preserve the original layout, structure, and proportions so it clearly reads as the same screen — just cleaner and schematic, like a mockup you'd put in front of a user to test.
+- If the source is a very DENSE screen (full app editor, toolbars, long lists, template galleries): SIMPLIFY hard. Keep only the key regions and their important labels as legible text; collapse dense panels, lists, and toolbars into a few clean placeholder blocks; and OMIT tiny secondary text, code snippets, and URLs entirely rather than rendering them unreadably. Favor clarity over completeness — fewer, bigger, readable elements.
+- Crisp alignment, even spacing, professional.
 `.trim(),
     items: [
-      { id: 'wf-1', file: 'wf-1.png', prompt: 'Low-fi wireframe of this screen.' },
-      { id: 'wf-2', file: 'wf-2.png', prompt: 'Low-fi wireframe of this screen.' },
-      { id: 'wf-3', file: 'wf-3.png', prompt: 'Low-fi wireframe of this screen.' },
-      { id: 'wf-4', file: 'wf-4.png', prompt: 'Low-fi wireframe of this screen.' },
-      { id: 'wf-5', file: 'wf-5.png', prompt: 'Low-fi wireframe of this screen.' },
-      { id: 'wf-6', file: 'wf-6.png', prompt: 'Low-fi wireframe of this screen.' },
-      { id: 'wf-7', file: 'wf-7.png', prompt: 'Low-fi wireframe of this screen.' },
-      { id: 'wf-8', file: 'wf-8.png', prompt: 'Low-fi wireframe of this screen.' },
+      { id: 'wf-1', file: 'wf-1.png', prompt: 'Mid-fidelity wireframe of this screen, keeping all text readable.' },
+      { id: 'wf-2', file: 'wf-2.png', prompt: 'Mid-fidelity wireframe of this screen, keeping all text readable.' },
+      { id: 'wf-3', file: 'wf-3.png', prompt: 'Mid-fidelity wireframe of this screen, keeping all text readable.' },
+      { id: 'wf-4', file: 'wf-4.png', prompt: 'Mid-fidelity wireframe of this screen, keeping all text readable.' },
+      { id: 'wf-5', file: 'wf-5.png', prompt: 'Mid-fidelity wireframe of this screen, keeping all text readable.' },
+      { id: 'wf-6', file: 'wf-6.png', prompt: 'Mid-fidelity wireframe of this website-editor screen. CRITICAL: render NO small/secondary text, NO code, NO block IDs, NO file paths or glob patterns, NO URLs — replace all of those with plain neutral placeholder blocks. Keep ONLY a few large, real, correctly-spelled labels for the main regions (e.g. left panel "Pages", center "Canvas", right panel "Settings", top "Editor"). Every visible word must be a real, meaningful, correctly spelled label — absolutely no gibberish or truncated words.' },
+      { id: 'wf-7', file: 'wf-7.png', prompt: 'Mid-fidelity wireframe of this screen, keeping all text readable.' },
+      { id: 'wf-8', file: 'wf-8.png', prompt: 'Mid-fidelity wireframe of this screen, keeping all text readable.' },
     ],
   },
 
