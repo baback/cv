@@ -74,7 +74,7 @@ function CaseStudy() {
 
       <article className="px-4 pb-24">
         <Column>
-          <CaseImage src="/cover.webp" alt="Lindo Agentic — case study cover" />
+          <CaseImage src="/work/lindo/cover.webp" alt="Lindo Agentic — case study cover" />
 
           {/* What is an agentic website platform */}
           <SectionNumber>What is an agentic website platform?</SectionNumber>

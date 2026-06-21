@@ -151,4 +151,74 @@ Convert this screenshot into a clean MID-FIDELITY wireframe — a testable Figma
       },
     ],
   },
+
+  // ── Lexpoint diagrams — light, monochrome + single blue accent, rounded/clean ──
+  lexpoint: {
+    style: `
+Style guide for ALL images — clean, minimal, light, professional:
+- LIGHT mode: soft off-white background (#F7F8FA). White cards with gently ROUNDED corners (18px) and a hairline light-grey border (#E5E7EB); at most a very soft shadow. Curvy and friendly, never sharp/harsh.
+- MONOCHROME with ONE accent: neutral greys for everything (#1A1A1A headings, #5C5C5C body, #E5E7EB fills/lines) and a single accent — BLUE (#2563EB) — used sparingly for icons, highlights, active items, checkmarks, and key arrows. Avoid all other colors; for comparisons use BLUE for positive and muted GREY for negative (no red/green).
+- Clean geometric sans-serif, clear hierarchy, generous whitespace. Flat vector, no photos, no heavy gradients, no 3D. Every word a real, correctly-spelled, meaningful label — no gibberish. Landscape.
+`.trim(),
+    items: [
+      {
+        id: 'cover',
+        file: 'cover.png',
+        prompt:
+          "A clean, minimal light hero banner on a soft off-white background. Left: large dark-grey title 'ImmiReport', subtitle 'One clear answer from 60+ Canadian immigration programs', and a small 'Lexpoint.io' wordmark. Right: a rounded white card UI motif — a 'CRS 0 / 600' score readout and a short ranked list of programs (Express Entry, OINP, BCPNP) with small status chips. Blue accent only, rounded corners, airy and modern.",
+      },
+      {
+        id: 'team',
+        file: 'team.png',
+        prompt:
+          "A team-structure diagram on a soft off-white background, rounded white nodes connected by thin blue lines. Center node 'Product design (me)'. Connected nodes: 'Product', 'Engineering', 'Licensed immigration consultants (RCICs)'. Small caption: 'Cross-functional — design + engineering + immigration expertise'. Monochrome with a blue accent, rounded and clean.",
+      },
+      {
+        id: 'research',
+        file: 'research.png',
+        prompt:
+          "Three rounded white testimonial cards with hairline grey borders on a soft off-white background, monochrome text, a blue quotation mark on each. Card 1: \"I spent hours on government pages and still couldn't tell if I qualified.\" — Applicant. Card 2: \"Half my first calls are just telling people whether they have a chance at all.\" — Immigration consultant. Card 3: \"I need every applicant to see the same answer, every time.\" — Practice manager. Clean, minimal, rounded.",
+      },
+      {
+        id: 'competitive',
+        file: 'competitive.png',
+        prompt:
+          "Two rounded white comparison cards on a soft off-white background. LEFT 'What exists today' with muted grey ✗ marks: single-program points calculators · content-heavy government pages · no cross-program answer · no path to qualify. RIGHT 'ImmiReport' with BLUE ✓ marks: one profile to all 60+ programs · a single CRS score out of 600 · ranked eligibility with reasoning · a simulator that shows how to qualify. Monochrome with blue accent, rounded, clean contrast (no red or green).",
+      },
+      {
+        id: 'personas',
+        file: 'personas.png',
+        prompt:
+          "Two rounded white persona cards on a soft off-white background, monochrome text with blue accents and a simple round avatar. 'The Hopeful Applicant' — goal: know if I qualify, for what, and what to do next without paying a lawyer just to find out; pain: 60+ programs, opaque points rules, $500+ consultations. 'The Consultant (RCIC)' — goal: receive genuinely qualified, well-organized clients; pain: half of first calls are just eligibility triage. Clean and minimal.",
+      },
+      {
+        id: 'mvp',
+        file: 'mvp.png',
+        prompt:
+          "A rounded two-column MVP scope on a soft off-white background. LEFT 'Prioritized' with BLUE check marks: layered profile · CRS score across programs · ranked eligibility with reasoning · qualify-by simulator. RIGHT 'Deferred' with muted grey hollow circles: more jurisdictions · team review workflows · automated document reminders · turnaround analytics. Monochrome with blue accent, rounded cards, clean.",
+      },
+    ],
+  },
+
+  // ── Lexpoint wireframes — sharp mid-fidelity mockups with a blue accent ──
+  lexwire: {
+    style: `
+Convert this screenshot into a clean MID-FIDELITY wireframe — a testable mockup in a serious legal-tech style:
+- KEEP ALL TEXT LEGIBLE and in place: headings, field labels, button labels, menu items, step labels stay as actual readable words. DO NOT replace text with grey bars or gibberish — preserve the real labels from the screenshot.
+- SHARP corners only (no rounded). Thin 1.5px outlines for cards, panels, inputs. Flat light-grey (#ECECEC) blocks for images/media.
+- Grayscale on white with ONE accent: royal blue (#2563EB) for the primary action/active step only. No photos, no gradients, no shadows.
+- If the source is dense: SIMPLIFY — keep only the key regions and important labels; collapse long lists/toolbars into a few clean blocks; OMIT tiny secondary text, codes, and URLs rather than rendering them unreadably.
+- Preserve the original layout/proportions so it reads as the same screen. Crisp alignment, generous spacing, professional.
+`.trim(),
+    items: [
+      { id: 'lw-1', file: 'lw-1.png', prompt: 'Mid-fidelity wireframe of this onboarding screen, all labels readable.' },
+      { id: 'lw-2', file: 'lw-2.png', prompt: 'Mid-fidelity wireframe of this onboarding screen, all labels readable.' },
+      { id: 'lw-3', file: 'lw-3.png', prompt: 'Mid-fidelity wireframe of this selection screen, all labels readable.' },
+      { id: 'lw-4', file: 'lw-4.png', prompt: 'Mid-fidelity wireframe of this profile screen, all labels readable.' },
+      { id: 'lw-5', file: 'lw-5.png', prompt: 'Mid-fidelity wireframe of this profile screen, all labels readable.' },
+      { id: 'lw-6', file: 'lw-6.png', prompt: 'Mid-fidelity wireframe of this report screen, all labels readable.' },
+      { id: 'lw-7', file: 'lw-7.png', prompt: 'Mid-fidelity wireframe of this report screen, all labels readable.' },
+      { id: 'lw-8', file: 'lw-8.png', prompt: 'Mid-fidelity wireframe of this simulator screen, all labels readable.' },
+    ],
+  },
 }

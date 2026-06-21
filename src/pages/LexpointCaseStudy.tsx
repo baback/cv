@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft } from 'lucide-react'
-import PasswordGate from '../components/PasswordGate'
-import Artifact from '../components/Artifact'
 import CaseStudyShell from '../components/CaseStudyShell'
+import TableOfContents, { type TocItem } from '../components/TableOfContents'
+import { CaseImage, ImageGrid } from '../components/casegraphics'
 import {
   Column,
   SectionNumber,
@@ -15,9 +15,29 @@ import {
 
 const ease = [0.16, 1, 0.3, 1] as const
 
+const TOC: TocItem[] = [
+  { label: 'What is an immigration eligibility assessment?' },
+  { label: 'Project inception' },
+  { label: 'The problem statement' },
+  { label: 'The solution: ImmiReport' },
+  { label: 'The team' },
+  { label: 'Research and understanding' },
+  { label: 'Competitive analysis' },
+  { label: 'User archetypes' },
+  { label: 'Explorations and usability testing' },
+  { label: 'Gather — the layered profile' },
+  { label: 'Assess — one clear report' },
+  { label: 'Act — simulate the path to yes' },
+  { label: 'Scoping the MVP' },
+  { label: 'Finalizing designs' },
+  { label: 'Outcome and what’s next' },
+]
+
 function CaseStudy() {
   return (
     <CaseStudyShell>
+      <TableOfContents items={TOC} />
+
       {/* Hero */}
       <header className="px-4 pt-16 sm:pt-20">
         <Column>
@@ -35,8 +55,8 @@ function CaseStudy() {
             transition={{ duration: 0.7, delay: 0.05, ease }}
             className="mt-5 text-3xl font-medium leading-[1.1] text-primary sm:text-4xl md:text-5xl"
           >
-            ImmiReport — turning immigration case files into{' '}
-            <span className="font-serif italic">court-ready reports.</span>
+            ImmiReport — one clear answer from{' '}
+            <span className="font-serif italic">60+ immigration programs.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -44,333 +64,256 @@ function CaseStudy() {
             transition={{ duration: 0.7, delay: 0.12, ease }}
             className="mt-6 text-sm text-subtle sm:text-base"
           >
-            Babak Jafari · Product Designer · Immigration legal-tech platform
+            Babak Jafari · Product Design Consultant · Canadian immigration
+            legal-tech
           </motion.p>
         </Column>
       </header>
 
       <article className="px-4 pb-24">
         <Column>
-          <Artifact
-            tall
-            title="Hero banner"
-            desc="Full-width brand-color banner with white text. Left: the title “ImmiReport” + subtitle “Immigration report generation” + the Lexpoint logo. Right: a clean illustration or cropped screenshot — a messy stack of case documents on one side, a single polished report on the other."
-          />
+          <CaseImage src="/work/lexpoint/cover.webp" alt="ImmiReport — case study cover" />
 
-          {/* What is report preparation */}
-          <SectionNumber>What is immigration report preparation?</SectionNumber>
+          {/* What is */}
+          <SectionNumber>What is an immigration eligibility assessment?</SectionNumber>
           <Lead>
-            Immigration cases run on documents — forms, evidence, declarations,
-            and supporting letters that must be assembled accurately and
-            consistently for each applicant.
+            Canada has 60+ permanent- and temporary-residence programs, each with
+            its own conditional, points-based rules.
           </Lead>
           <P>
-            Preparing these reports is detailed, repetitive, and high-stakes: a
-            small inconsistency can delay or sink an application. As immigration
-            practices take on more cases, the bottleneck isn&apos;t legal
-            judgment — it&apos;s the hours spent assembling and formatting
-            reliable, complete reports. Tooling that removes that bottleneck
-            without sacrificing accuracy directly expands how many people a
-            practice can help.
+            An eligibility assessment takes a person&apos;s full profile — age,
+            work, education, language, family, finances — and works out which
+            programs they qualify for, how strong their case is, and what would
+            improve it. For most people, getting that answer has meant paying a
+            consultant, or guessing from dense government pages.
           </P>
 
-          {/* Project inception */}
+          {/* Inception */}
           <SectionNumber>Project inception</SectionNumber>
           <P>
-            We identified a clear opportunity in the most frequent, most
-            error-prone part of the workflow: producing the report itself. It
-            stood out because every case needs one, the work is largely manual,
-            and mistakes are costly. By building ImmiReport into Lexpoint, we
-            aimed to:
+            Lexpoint set out to replace the expensive, gate-kept first step of
+            immigration — the paid consultation — with an instant, self-serve
+            assessment that an applicant can trust enough to act on. We had three
+            goals:
           </P>
           <BulletList
             items={[
               {
-                label: 'Simplify the workflow',
-                text: 'give immigration teams one place to turn a case file into a complete, consistent report, instead of stitching together documents by hand.',
+                label: 'Clarity',
+                text: 'make eligibility understandable to someone with no legal background.',
               },
               {
-                label: 'Solve the key pain point',
-                text: 'reduce the manual effort and the risk of error that come from assembling reports across scattered sources.',
+                label: 'Coverage',
+                text: 'assess every program in one place, behind a single score people can understand.',
               },
               {
-                label: 'Set a strategic foundation',
-                text: 'establish a reliable report engine that broader immigration-case features could be built on top of.',
+                label: 'Conversion',
+                text: 'turn a qualified result into a started application with a licensed consultant.',
               },
             ]}
           />
 
-          {/* Problem statement */}
+          {/* Problem */}
           <SectionNumber>The problem statement</SectionNumber>
-          <Heading>The bottleneck isn’t judgment — it’s assembly</Heading>
+          <Heading>The first question is also the most paralyzing</Heading>
           <P>
-            Immigration professionals assemble reports from fragmented inputs —
-            intake answers, uploaded evidence, and standard legal language — and
-            do it largely by hand for every case. That manual process is slow,
-            inconsistent between team members, and easy to get wrong, and the cost
-            of an error is real: a flawed report can delay or jeopardize
-            someone&apos;s case. The teams needed a way to produce a complete,
-            accurate, consistent report from a single workflow rather than
-            reconstructing it document by document each time.
+            Immigration&apos;s first question — “do I even qualify, and for what?”
+            — is buried under 60+ programs with different, conditional rules. The
+            only reliable way to get a real answer was a $500+ consultation, so
+            people who couldn&apos;t pay simply didn&apos;t know where they stood,
+            and those who could still faced a process that felt opaque and
+            overwhelming. The stakes are someone&apos;s future, so the emotional
+            weight is enormous.
           </P>
 
           {/* Solution */}
           <SectionNumber>The solution: ImmiReport</SectionNumber>
           <P>
-            ImmiReport turns a case&apos;s intake and evidence into a structured,
-            court-ready report through one guided flow. It pulls the case
-            information into a consistent format, flags what&apos;s missing before
-            submission, and produces a polished, standardized document — so the
-            output is reliable no matter who on the team prepared it. The vision
-            was a report engine that didn&apos;t just speed the work up, but
-            raised the floor on accuracy and consistency.
+            ImmiReport gathers a person&apos;s profile, scores them out of 600
+            against all 60+ programs, shows exactly where they stand and why, and
+            lets them simulate how to qualify — then bridges qualified users into
+            starting an application with a licensed consultant. It turns the
+            maze of programs into a single, scannable answer and a path forward.
           </P>
 
           {/* Team */}
           <SectionNumber>The team</SectionNumber>
           <P>
-            I worked as the product designer alongside a product lead, engineer,
-            and immigration subject-matter expert, partnering closely with the
-            people who prepare these reports day to day.
+            I worked as the product design consultant on the assessment
+            experience — designing the end-to-end flow from profile to ImmiReport
+            to the simulator — partnering with licensed immigration consultants
+            (RCICs), engineering, and product so the experience stayed both
+            legally accurate and genuinely usable.
           </P>
-          <P className="text-subtle">
-            [ confirm the real team / roles here ]
-          </P>
-          <Artifact
-            title="Team cluster diagram"
-            desc="Overlapping-circles graphic. Core circles for the working trio — Product design, Engineering, Immigration expertise — with satellite circles for any others (PM, QA, legal reviewer). Keep it honest to who was actually involved."
-          />
+          <CaseImage src="/work/lexpoint/team.webp" alt="Team — design, engineering, and immigration expertise" />
 
-          {/* Divider */}
-          <Artifact
-            title="Section divider — “The design process”"
-            desc="Full-width brand-color block, white centered text “The design process,” with the double-diamond (discover → define → develop → deliver) motif behind it."
-          />
+          {/* Divider — coded gradient */}
+          <div className="my-10 flex min-h-[180px] items-center justify-center rounded-3xl border border-line/10 bg-gradient-to-br from-[#F4F6FB] via-[#EAF1FF] to-[#DCE7FF] px-6 py-16 text-center sm:min-h-[220px]">
+            <p className="font-serif text-3xl italic text-[#2563EB] sm:text-4xl">
+              The design process
+            </p>
+          </div>
 
           {/* Research */}
           <SectionNumber>Research and understanding</SectionNumber>
           <P>
-            The work started by understanding how reports actually get made today
-            — sitting with the people who prepare them and tracing every step
-            from intake to final document. The goal was to find where time was
-            lost and where errors crept in, so the tool solved the real
-            bottleneck rather than an assumed one.
+            We began with the people who live this problem every day — licensed
+            consultants — to encode the real eligibility logic and the questions
+            that actually change an outcome. I mapped the official points systems
+            across programs to find the common structure beneath the complexity.
+            The rules were complicated; the human need was simple: tell me where I
+            stand, and what to do next.
           </P>
-          <Artifact
-            title="Three quote cards (mint / yellow / pink)"
-            desc={
-              <ul className="space-y-2">
-                <li>
-                  “Most of my time isn&apos;t legal work — it&apos;s assembling
-                  the same report over and over and double-checking nothing&apos;s
-                  missing.” — Immigration consultant [ sample ]
-                </li>
-                <li>
-                  “Two people on my team prepare the same kind of report
-                  differently. I need it consistent.” — Practice manager
-                  [ sample ]
-                </li>
-                <li>
-                  “If something&apos;s missing and it goes out anyway, that&apos;s
-                  the client&apos;s case on the line. I can&apos;t afford that.” —
-                  Immigration lawyer [ sample ]
-                </li>
-              </ul>
-            }
-          />
+          <CaseImage src="/work/lexpoint/research.webp" alt="Research — applicant and consultant quotes" />
 
-          {/* Competitive analysis */}
+          {/* Competitive */}
           <SectionNumber>Competitive analysis</SectionNumber>
           <P>
-            We looked at how immigration teams produce reports today — generic
-            document tools, manual templates, and general practice-management
-            software — to find what none of them did well.
+            Existing tools fell into two camps: single-program points calculators,
+            and content-heavy government pages that explained the rules without
+            ever telling you your standing. The gap was clear — no one turned a
+            full profile into one cross-program answer with a path forward.
           </P>
-          <Artifact
-            title="Two comparison cards — Market Gaps vs. Advantages"
-            desc={
-              <div className="space-y-2">
-                <p>
-                  <strong className="text-primary">Market Gaps —</strong> manual
-                  assembly across scattered documents · inconsistent output between
-                  team members · no check for missing information before
-                  submission · generic tools with no immigration-specific
-                  structure.
-                </p>
-                <p>
-                  <strong className="text-primary">ImmiReport Advantages —</strong>{' '}
-                  one guided flow from case file to finished report · standardized,
-                  consistent output every time · missing-information flags before
-                  the report goes out · built specifically for immigration
-                  reporting.
-                </p>
-              </div>
-            }
-          />
+          <CaseImage src="/work/lexpoint/competitive.webp" alt="Competitive analysis — what exists today vs. ImmiReport" />
           <P>
             <span className="font-semibold text-primary">Key takeaway — </span>
-            ImmiReport&apos;s advantage isn&apos;t speed alone — it&apos;s
-            producing a reliable, consistent, complete report regardless of who
-            prepares it.
+            ImmiReport&apos;s advantage isn&apos;t a calculator; it&apos;s turning
+            a whole profile into one understandable answer and a concrete next
+            step.
           </P>
 
           {/* Archetypes */}
-          <SectionNumber>User archetypes and workflows</SectionNumber>
-          <P className="text-subtle">[ adjust roles to match Lexpoint’s real users ]</P>
-          <Artifact
-            title="Three persona cards"
-            desc={
-              <div className="space-y-2">
-                <p>
-                  <strong className="text-primary">The Practitioner —</strong>{' '}
-                  (immigration lawyer / consultant) produce accurate, complete
-                  reports on deadline; keep cases moving; spend time on judgment,
-                  not assembly. Pains: manual building eats billable time; errors
-                  carry real consequences; hard to keep output consistent.
-                </p>
-                <p>
-                  <strong className="text-primary">The Preparer —</strong>{' '}
-                  (paralegal / case assistant) assemble many reports accurately and
-                  quickly; gather and check every required piece; match the
-                  firm&apos;s standard. Pains: repetitive, detailed work; easy to
-                  miss an item; no single place to do it all.
-                </p>
-                <p>
-                  <strong className="text-primary">The Solo / small practice —</strong>{' '}
-                  handle a full caseload without extra staff; keep quality high
-                  while moving fast. Pains: no team to double-check; every error is
-                  costly; limited budget for specialized tools.
-                </p>
-              </div>
-            }
-          />
-
-          {/* Report generation flow */}
-          <SectionNumber>Report generation flow</SectionNumber>
-          <Artifact
-            title="Flow diagram — case to report"
-            desc="Rounded-box flowchart: Open case / intake → Pull in case info + evidence → Guided report builder (stepped form, save as draft) → Missing-information check / flags → Review → Generate final report → Export / deliver. Mark the steps where a user can save as draft."
-          />
-          <Artifact
-            title="Second flow diagram (optional)"
-            desc="Only if there’s a second distinct path — new report vs. update an existing report — shown side by side, each as a stepped flow. If there’s only one path, skip this."
-          />
-
-          {/* Wireframes */}
-          <SectionNumber>Wireframes and usability testing</SectionNumber>
+          <SectionNumber>User archetypes</SectionNumber>
           <P>
-            We moved quickly from flows to wireframes for the report builder and
-            the review step — the two moments that most decide whether the output
-            is trusted — and put them in front of real preparers.
+            Two archetypes drove every decision — and the assessment had to serve
+            both at once.
           </P>
-          <Artifact
-            title="Wireframe grid (3×3 thumbnails)"
-            desc="Thumbnails of real wireframes — the stepped report builder, the evidence/intake pull-in, the missing-information flags, the review screen, and the generated report. Include one earlier/rejected version if you have it."
+          <CaseImage src="/work/lexpoint/personas.webp" alt="User archetypes — the Hopeful Applicant and the Consultant" />
+
+          {/* Explorations */}
+          <SectionNumber>Explorations and usability testing</SectionNumber>
+          <P>
+            I moved from flows to mid-fidelity mockups for the moments that most
+            decide whether people trust the result — onboarding, the profile, the
+            report, and the simulator — and tested them with applicants and
+            consultants before polishing a pixel.
+          </P>
+          <ImageGrid
+            images={[
+              { src: '/work/lexpoint/wires-mid/lw-1.webp', alt: 'Wireframe — name onboarding step' },
+              { src: '/work/lexpoint/wires-mid/lw-2.webp', alt: 'Wireframe — country of residence' },
+              { src: '/work/lexpoint/wires-mid/lw-3.webp', alt: 'Wireframe — immigration goal selection' },
+              { src: '/work/lexpoint/wires-mid/lw-4.webp', alt: 'Wireframe — work experience profile' },
+              { src: '/work/lexpoint/wires-mid/lw-5.webp', alt: 'Wireframe — language tests' },
+              { src: '/work/lexpoint/wires-mid/lw-6.webp', alt: 'Wireframe — Express Entry overview' },
+              { src: '/work/lexpoint/wires-mid/lw-7.webp', alt: 'Wireframe — temporary residence options' },
+              { src: '/work/lexpoint/wires-mid/lw-8.webp', alt: 'Wireframe — simulator scenario builder' },
+            ]}
           />
 
-          {/* Report builder usability study */}
-          <SectionNumber>Report builder usability study</SectionNumber>
+          {/* Gather */}
+          <SectionNumber>Gather — the layered profile</SectionNumber>
           <P>
-            The goal was to make building a report feel as reliable as it was
-            fast. We asked preparers to walk through creating a report and watched
-            where they hesitated or lost confidence.
+            Assessing 60+ programs needs a lot of data, but a giant form kills
+            momentum before the user ever sees value. The design move: a layered
+            profile — essentials first (status, work, education, language), then
+            optional details framed as ways to improve the odds (job offer,
+            income, family, trade certificate, letter of acceptance) — each
+            presented as unlocking more pathways, so giving more feels like
+            gaining options, not grinding through a form.
           </P>
           <P>
-            Preparers valued seeing a clear summary of the report before
-            generating it, and the missing-information flags gave them confidence
-            that nothing slipped through. A <em>save-as-draft</em> need surfaced —
-            reports often can&apos;t be finished in one sitting because something
-            is still missing from the client or a colleague. [ confirm with your
-            real results ]
+            <span className="font-semibold text-primary">Finding — </span>
+            a single long form caused drop-off. When the optional section was
+            framed as unlocking more pathways, people kept going.
           </P>
+          <CaseImage src="/work/lexpoint/shots-web/gather.webp" alt="The layered immigration profile — work, education, language, and more" />
 
-          {/* Review & trust usability study */}
-          <SectionNumber>Review &amp; trust usability study</SectionNumber>
+          {/* Assess */}
+          <SectionNumber>Assess — one clear report</SectionNumber>
           <P>
-            Once a report is drafted, the anxious moment is review — is it
-            complete and correct before it goes out? We studied what preparers
-            needed to see at a glance to trust the output: missing or incomplete
-            items surfaced clearly, a consistent structure they could scan
-            quickly, and confidence that the same case would produce the same
-            report every time.
+            Raw eligibility rules are conditional and overwhelming; showing them
+            verbatim buries the user. ImmiReport shows a single CRS-style score
+            out of 600 — the language immigration already speaks — with every
+            program ranked underneath by fit, each carrying the reasoning and the
+            user&apos;s standing. The maze becomes a personalized, scannable
+            report.
           </P>
-          <Artifact
-            title="Three quote cards (green / purple / blue)"
-            desc={
-              <ul className="space-y-2">
-                <li>
-                  “It flagged the one document I&apos;d forgotten before I sent it.
-                  That alone is worth it.” — Paralegal [ sample ]
-                </li>
-                <li>
-                  “I need to save drafts constantly — there&apos;s always something
-                  missing from the client.” — Consultant [ sample ]
-                </li>
-                <li>
-                  “Consistency is everything. Now every report from my team looks
-                  the same and nothing&apos;s missed.” — Practice manager
-                  [ sample ]
-                </li>
-              </ul>
-            }
-          />
+          <P>
+            <span className="font-semibold text-primary">Finding — </span>
+            the single number was the moment of relief. A tester who&apos;d felt
+            completely lost said it was the first time any of it made sense.
+          </P>
+          <CaseImage src="/work/lexpoint/shots-web/assess.webp" alt="ImmiReport — CRS score out of 600 with ranked programs" />
+          <CaseImage src="/work/lexpoint/shots-web/eligibility.webp" alt="Per-program eligibility — Federal Skilled Worker breakdown and action plan" />
 
-          {/* Scoping the MVP */}
+          {/* Act */}
+          <SectionNumber>Act — simulate the path to yes</SectionNumber>
+          <P>
+            A flat “you don&apos;t qualify” is demoralizing and dead-ends the
+            journey. The design move: a simulator — change an input (raise a
+            language score, add a job offer) and watch the score and eligibility
+            move in real time, with a clear “what changed” and “why it
+            didn&apos;t change more.” So a no becomes a not-yet, with the shortest
+            path to a yes — then a bridge to start the application with a
+            consultant.
+          </P>
+          <P>
+            <span className="font-semibold text-primary">Finding — </span>
+            the simulator changed the emotion entirely; watching the score rise
+            with a hypothetical job offer turned a dead-end into a plan.
+          </P>
+          <CaseImage src="/work/lexpoint/shots-web/simulator.webp" alt="The ImmiReport simulator — what-if scoring with what changed" />
+
+          {/* Scoping */}
           <SectionNumber>Scoping the MVP</SectionNumber>
           <P>
-            We balanced what preparers needed most against what we could build
-            first.
+            I prioritized the assessment core — the layered profile, the score,
+            and the ranked programs — as must-haves, with the simulator and
+            per-program detail as high-value fast-follows. The constraint was
+            real: every program added meant encoding another set of legal rules,
+            so scope had to balance user value against engineering effort.
           </P>
-          <Artifact
-            title="Two cards — Prioritized vs. Deferred"
-            desc={
-              <div className="space-y-2">
-                <p>
-                  <strong className="text-primary">Prioritized —</strong> guided
-                  report builder · pull case info + evidence into the report ·
-                  missing-information flags · save as draft · standardized final
-                  export.
-                </p>
-                <p>
-                  <strong className="text-primary">Deferred —</strong> multiple
-                  report types/templates · team review workflows · automated
-                  reminders for missing items · deeper case-management integration
-                  · analytics on turnaround.
-                </p>
-              </div>
-            }
-          />
+          <CaseImage src="/work/lexpoint/mvp.webp" alt="MVP scope — prioritized vs. deferred" />
 
-          {/* Finalizing designs */}
+          {/* Finalizing */}
           <SectionNumber>Finalizing designs</SectionNumber>
           <P>
-            In the final phase I refined the builder and review screens against
-            usability feedback, tightening the moments that most affect trust —
-            the missing-information check and the pre-generation summary — so the
-            output felt dependable, not just quick.
+            I refined the flows through critique with the team and review sessions
+            with consultants, to make sure every simplification stayed legally
+            accurate. The hardest part of the craft was hiding the complexity
+            without hiding anything that actually mattered to a person&apos;s
+            case.
           </P>
-          <Artifact
-            title="High-fidelity screenshot (the showcase image)"
-            desc="The cleanest polished screen — the report builder mid-flow with the summary/flags visible, or the finished generated report."
-          />
 
           {/* Outcome */}
           <SectionNumber>Outcome and what&apos;s next</SectionNumber>
-          <P className="text-subtle">
-            [ add a real result you can stand behind — time saved per report,
-            consistency, adoption, or a qualitative outcome. If there&apos;s no
-            metric, keep it qualitative rather than inventing one. ]
-          </P>
+          <BulletList
+            items={[
+              {
+                text: 'A self-serve assessment that scores candidates across 60+ programs and shows them how to qualify.',
+              },
+              {
+                text: 'Replaced the paywalled first consult with instant clarity at the top of the funnel.',
+              },
+              {
+                text: 'A clear bridge from a qualified report into a proposal and a started application with a consultant.',
+              },
+            ]}
+          />
           <P>
             <span className="font-semibold text-primary">What I learned — </span>
-            in high-stakes legal tooling, trust comes from completeness and
-            consistency, not just speed — the most valuable thing the design did
-            was make sure nothing went out missing.
+            in regulated, high-stakes products, the design job is to make the
+            complexity invisible and the next step obvious. The most valuable
+            thing I designed wasn&apos;t a screen — it was certainty in a process
+            that usually runs on anxiety.
           </P>
           <P>
             <span className="font-semibold text-primary">Next — </span>
-            more report types, team review, and tighter case-management
-            integration.
+            more programs and jurisdictions, deeper simulator guidance, and a
+            tighter handoff from a qualified report into the consultant&apos;s
+            case workflow — so the path from “do I qualify” to a submitted
+            application is one continuous experience.
           </P>
 
           {/* Footer nav */}
@@ -392,13 +335,5 @@ function CaseStudy() {
 }
 
 export default function LexpointCaseStudy() {
-  return (
-    <PasswordGate
-      id="lexpoint"
-      title="Lexpoint ImmiReport"
-      role="Lexpoint.io · Case study"
-    >
-      <CaseStudy />
-    </PasswordGate>
-  )
+  return <CaseStudy />
 }

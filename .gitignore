@@ -24,3 +24,8 @@ yarn-error.log*
 public/work/lindo/wires/
 public/work/lindo-v2/
 public/work/lindo2/
+
+# Lexpoint source screenshots & wireframe sources (not deployed)
+/public/work/lexpoint.io screenshots/
+public/work/lexpoint/shots/
+public/work/lexpoint/wires/

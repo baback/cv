@@ -22,7 +22,7 @@ export const SHOWCASES: Showcase[] = [
     id: 'immigration',
     title: 'Lexpoint.io',
     role: 'Product Design Consultant · Legal-tech',
-    comingSoon: true,
+    path: '/work/lexpoint',
     blurb:
       'A Canadian immigration legal-tech platform replacing costly consultations with instant, self-serve flows.',
     highlights: [
