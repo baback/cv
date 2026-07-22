@@ -32,3 +32,6 @@ public/work/lexpoint/wires/
 
 # Source input for résumé revisions (not deployed)
 public/revised/
+
+# Private job-search materials (tailored resumes, JDs, generated PDFs) — never deploy/publish
+applications/
