@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
-import Studio from './pages/Studio'
 import LindoTrustCaseStudy from './pages/LindoTrustCaseStudy'
 import LexpointCaseStudy from './pages/LexpointCaseStudy'
 
@@ -20,7 +19,6 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/studio" element={<Studio />} />
         <Route path="/work/lindo" element={<LindoTrustCaseStudy />} />
         <Route path="/work/lexpoint" element={<LexpointCaseStudy />} />
       </Routes>
